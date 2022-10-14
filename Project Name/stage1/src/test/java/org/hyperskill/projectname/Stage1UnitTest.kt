@@ -38,7 +38,7 @@ class Stage1UnitTest : AbstractUnitTest<MainActivity>(MainActivity::class.java){
         testActivity {
             button1.clickAndRun()
             assertLastToastMessageEquals(
-                errorMessage = "this should pass if run after test0 because counter1 was not reset",
+                errorMessage = "this should not pass if run after test0 because counter1 was not reset",
                 expectedMessage = "1"
             )
 
@@ -63,7 +63,7 @@ class Stage1UnitTest : AbstractUnitTest<MainActivity>(MainActivity::class.java){
         testActivity {
             button2.clickAndRun()
             assertLastToastMessageEquals(
-                errorMessage = "this should pass if run after test0 because counter1 was not reset",
+                errorMessage = "this should not pass if run after test2 because counter2 was not reset",
                 expectedMessage = "1"
             )
 
